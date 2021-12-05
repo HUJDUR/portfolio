@@ -1,0 +1,24 @@
+{
+	"name": "portfolio",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.html",
+	"dependencies": {},
+	"devDependencies": {
+		"node-sass": "^6.0.1",
+		"sass": "^1.44.0"
+	},
+	"scripts": {
+		"compile:sass": "node-sass sass/main.scss css/style.css"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/HUJDUR/portfolio.git"
+	},
+	"author": "Nadir Hujdur",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/HUJDUR/portfolio/issues"
+	},
+	"homepage": "https://github.com/HUJDUR/portfolio#readme"
+}
