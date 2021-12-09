@@ -22,8 +22,10 @@ body {
 
 .header {
   display: flex;
-  height: 120rem;
+  height: 100vh;
   flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   background-blend-mode: darken;
   background-size: cover;
   background-repeat: no-repeat; }
@@ -47,19 +49,43 @@ body {
         border: solid 2px #c1c1c1;
         padding: 0.6rem 1rem;
         border-radius: 1rem;
-        color: #c1c1c1; }
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; }
 
 .main {
-  flex-grow: 2;
   display: flex;
-  align-items: center; }
+  flex-direction: column;
+  margin-left: 12rem; }
+  .main__btn {
+    opacity: 0;
+    width: fit-content;
+    margin-top: 5rem;
+    align-self: center;
+    padding: 1rem 2.5rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    animation: popup 1s ease-out 6s;
+    animation-fill-mode: forwards; }
 
 .main__text {
+  opacity: 0;
   font-family: 'Catamaran', sans-serif;
   font-weight: 700;
   font-size: 5.4rem;
-  margin-left: 12rem;
-  margin-bottom: 27rem; }
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid; }
+  .main__text--1 {
+    animation: typing 2s steps(22), blink 0.5s step-end 3 alternate;
+    animation-fill-mode: forwards; }
+  .main__text--2 {
+    animation: typing 2s steps(22), blink 0.5s step-end 3 alternate;
+    animation-delay: 3s;
+    animation-fill-mode: forwards; }
+
+.main__btn {
+  text-decoration: none;
+  color: #000;
+  border: solid 2px #000;
+  border-radius: 10px; }
 
 .navigation__list__element__link {
   text-decoration: none;
@@ -67,13 +93,26 @@ body {
 
 @keyframes typing {
   from {
+    opacity: 1;
     width: 0; }
+  99% {
+    border-right: 3px solid; }
   to {
-    width: 100%; } }
+    opacity: 1;
+    width: 100%;
+    border: none; } }
 
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent; }
+@keyframes blink {
   50% {
-    border-color: black; } }
+    border-color: transparent; } }
+
+@keyframes popup {
+  0% {
+    opacity: 0;
+    transform: scale(0.7); }
+  90% {
+    opacity: 1;
+    transform: scale(1.2); }
+  100% {
+    opacity: 1;
+    transform: scale(1); } }

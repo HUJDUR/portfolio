@@ -1,10 +1,12 @@
 .header {
 	display: flex;
-	height: 120rem;
+	height: 100vh;
 	flex-direction: column;
+	align-items: flex-start;
 
 	// background: url('/img/background.jpg');
 	// filter: blur(1px);
+	justify-content: center;
 	background-blend-mode: darken;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -30,7 +32,7 @@
 				border: solid 2px $color-grey-1;
 				padding: 0.6rem 1rem;
 				border-radius: 1rem;
-				color: $color-grey-1;
+				box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 			}
 			margin-right: 5rem;
 		}
@@ -38,7 +40,18 @@
 }
 
 .main {
-	flex-grow: 2;
 	display: flex;
-	align-items: center;
+	flex-direction: column;
+	margin-left: 12rem;
+
+	&__btn {
+		opacity: 0;
+		width: fit-content;
+		margin-top: 5rem;
+		align-self: center;
+		padding: 1rem 2.5rem;
+		box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+		animation: popup 1s ease-out 6s;
+		animation-fill-mode: forwards;
+	}
 }
