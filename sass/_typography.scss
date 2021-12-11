@@ -1,20 +1,21 @@
 .main {
 	&__text {
-		opacity: 0;
+		// opacity: 0;
+		opacity: 1;
 		font-family: 'Catamaran', sans-serif;
 		font-weight: 700;
 		font-size: 5.4rem;
 		white-space: nowrap;
 		overflow: hidden;
-		border-right: 3px solid;
+		// border-right: 3px solid;
 
 		&--1 {
-			animation: typing 2s steps(22), blink 0.5s step-end 3 alternate;
+			// animation: typing 2s steps(22), blink 0.5s step-end 3 alternate;
 			animation-fill-mode: forwards;
 		}
 
 		&--2 {
-			animation: typing 2s steps(22), blink 0.5s step-end 3 alternate;
+			// animation: typing 2s steps(22), blink 0.5s step-end 3 alternate;
 			animation-delay: 3s;
 
 			animation-fill-mode: forwards;
@@ -29,7 +30,11 @@
 	}
 }
 
-.navigation__list__element__link {
-	text-decoration: none;
-	color: $color-black-1;
+.navigation {
+	font-size: 1.8rem;
+
+	&__list__element__link {
+		text-decoration: none;
+		color: $color-black-1;
+	}
 }
