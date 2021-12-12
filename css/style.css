@@ -21,7 +21,7 @@ body {
   font-size: 2rem; }
 
 canvas {
-  background-color: #2a2a2a; }
+  background-color: #f2f2f2; }
 
 .header {
   display: flex;
@@ -44,7 +44,10 @@ canvas {
   align-self: center;
   width: 90%;
   padding: 1.5rem 0;
-  z-index: 2; }
+  z-index: 2;
+  background-color: #fffafa;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; }
   .navigation__list {
     display: flex;
     align-items: center;
@@ -55,7 +58,10 @@ canvas {
         border: solid 2px #c1c1c1;
         padding: 0.6rem 1rem;
         border-radius: 1rem;
-        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; }
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        transition: transform 0.2s; }
+        .navigation__list__element:first-child:hover {
+          transform: scale(1.1); }
 
 .main {
   display: flex;
@@ -64,15 +70,19 @@ canvas {
   z-index: 2;
   padding: 3rem 4rem;
   border-radius: 1rem;
-  background-color: white; }
+  background-color: #fffafa;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; }
   .main__btn {
     opacity: 1;
     width: fit-content;
-    margin-top: 5rem;
+    margin-top: 3rem;
     align-self: center;
     padding: 1rem 2.5rem;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    animation-fill-mode: forwards; }
+    animation-fill-mode: forwards;
+    transition: transform 0.2s; }
+    .main__btn:hover {
+      transform: scale(1.05); }
 
 .main__text {
   opacity: 1;
@@ -88,10 +98,11 @@ canvas {
     animation-fill-mode: forwards; }
 
 .main__btn {
-  text-decoration: none;
-  color: #000;
   border: solid 2px #000;
   border-radius: 10px; }
+  .main__btn__link {
+    text-decoration: none;
+    color: #000; }
 
 .navigation {
   font-size: 1.8rem; }

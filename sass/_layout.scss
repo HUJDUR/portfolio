@@ -23,8 +23,9 @@
 	width: 90%;
 	padding: 1.5rem 0;
 	z-index: 2;
-	// background-color: white;
-	// border-radius: 1rem;
+	background-color: #fffafa;
+	border-radius: 1rem;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
 	&__list {
 		display: flex;
@@ -37,6 +38,11 @@
 				padding: 0.6rem 1rem;
 				border-radius: 1rem;
 				box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+				transition: transform 0.2s;
+
+				&:hover {
+					transform: scale(1.1);
+				}
 			}
 			margin-right: 5rem;
 		}
@@ -50,17 +56,23 @@
 	z-index: 2;
 	padding: 3rem 4rem;
 	border-radius: 1rem;
-	background-color: white;
+	background-color: #fffafa;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
 	&__btn {
 		// opacity: 0;
 		opacity: 1;
 		width: fit-content;
-		margin-top: 5rem;
+		margin-top: 3rem;
 		align-self: center;
 		padding: 1rem 2.5rem;
 		box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 		// animation: popup 1s ease-out 6s;
 		animation-fill-mode: forwards;
+		transition: transform 0.2s;
+
+		&:hover {
+			transform: scale(1.05);
+		}
 	}
 }
