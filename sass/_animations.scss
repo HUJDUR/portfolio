@@ -1,26 +1,3 @@
-@keyframes typing {
-	from {
-		opacity: 1;
-		width: 0;
-	}
-
-	99% {
-		border-right: 3px solid;
-	}
-
-	to {
-		opacity: 1;
-		width: 100%;
-		border: none;
-	}
-}
-
-@keyframes blink {
-	50% {
-		border-color: transparent;
-	}
-}
-
 @keyframes popup {
 	0% {
 		opacity: 0;
@@ -29,11 +6,23 @@
 
 	90% {
 		opacity: 1;
-		transform: scale(1.2);
+		transform: scale(1.05);
 	}
 
 	100% {
 		opacity: 1;
 		transform: scale(1);
+	}
+}
+
+@keyframes reveal {
+	from {
+		opacity: 0;
+		width: 0;
+	}
+
+	to {
+		opacity: 1;
+		width: 100%;
 	}
 }

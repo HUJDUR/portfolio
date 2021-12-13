@@ -3,6 +3,9 @@ $color-grey-1: #c1c1c1;
 $color-black-1: #000;
 $color-white-1: #fff;
 
+$color-primary-1: #0e1212;
+$color-primary-2: #ff2121;
+
 * {
 	margin: 0;
 	padding: 0;
@@ -30,6 +33,6 @@ body {
 }
 
 canvas {
-	background-color: #f2f2f2;
+	background-color: $color-primary-1;
 	// background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
 }

@@ -3,79 +3,59 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 const c = canvas.getContext('2d');
 
-// const Circle = function (x, y, dx, dy, radius, color) {
+// const Circle = function (x, y, radius, color) {
 // 	this.x = x;
 // 	this.y = y;
-// 	this.dx = dx;
-// 	this.dy = dy;
 // 	this.radius = radius;
 // 	this.color = color;
 
 // 	this.draw = function () {
 // 		c.beginPath();
 // 		c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-// 		c.strokeStyle = this.color;
-// 		c.stroke();
 // 		c.fillStyle = this.color;
 // 		c.fill();
-// 	};
-
-// 	this.update = function (mousePosition) {
-// 		this.draw();
-// 		if (this.x + this.radius > innerWidth || this.x - this.radius < 0)
-// 			this.dx = -this.dx;
-
-// 		if (this.y + this.radius > innerHeight || this.y - this.radius < 0)
-// 			this.dy = -this.dy;
-
-// 		this.x += this.dx;
-// 		this.y += this.dy;
+// 		c.stroke();
 // 	};
 // };
 
-// const mousePosition = {
-// 	x: undefined,
-// 	y: undefined,
-// };
+// const circle = new Circle(innerWidth / 4, innerHeight / 3, 10, '#e91e63');
+// circle.draw();
 
-// window.addEventListener('mousemove', function (event) {
-// 	mousePosition.x = event.x;
-// 	mousePosition.y = event.y;
-// });
+const StraightLine = function (x, y, y2, dy, color) {
+	this.x = x;
+	this.start = innerHeight;
+	this.y = y;
+	this.y2 = y2;
+	this.dy = dy;
+	this.color = color;
 
-// const circles = [];
-// const colors = [
-// 	// '#65ccb8',
-// 	// '#86c232',
-// 	// '#46344e',
-// 	// '#31708e',
-// 	// '#f13c20',
-// 	// '#b39bc8',
-// 	// '#e85a4f',
-// 	'#86b3d1',
-// ];
+	this.draw = function () {
+		c.beginPath();
+		c.moveTo(this.x, this.y);
+		c.lineTo(this.x, this.start);
+		c.strokeStyle = this.color;
+		c.stroke();
+		c.closePath();
+	};
 
-// // Randomization of the necessary circle attributes nad circle creation
+	this.update = function () {
+		// console.log(this.start - this.y2);
+		if (this.start > this.y2) this.start = this.start - this.dy;
+		this.draw();
+	};
+};
 
-// for (let i = 0; i < 40; i++) {
-// 	const radius = Math.floor(Math.random() * 30) + 20;
-// 	const x = Math.random() * (innerWidth - radius * 1.5);
-// 	const y = Math.random() * (innerHeight - radius * 1.5);
-// 	const dx = (Math.random() - 0.5) * 2;
-// 	const dy = (Math.random() - 0.5) * 2;
-// 	const color = Math.floor(Math.random() * colors.length) + 0;
+const animate = function () {
+	const line = new StraightLine(
+		innerWidth / 4,
+		innerHeight,
+		innerHeight / 3,
+		100,
+		'#e91e63'
+	);
 
-// 	circles[i] = new Circle(x, y, dx, dy, radius, colors[color]);
-// }
+	line.update();
+	requestAnimationFrame(animate);
+};
 
-// // Canvas animate function
-
-// const animate = function () {
-// 	c.clearRect(0, 0, innerWidth, innerHeight);
-// 	for (let i = 0; i < circles.length; i++) {
-// 		circles[i].update(mousePosition);
-// 	}
-// 	requestAnimationFrame(animate);
-// };
-
-// animate();
+animate();

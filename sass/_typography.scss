@@ -8,27 +8,29 @@
 		white-space: nowrap;
 		overflow: hidden;
 		// border-right: 3px solid;
+		color: $color-white-1;
 
 		&--1 {
-			// animation: typing 2s steps(22), blink 0.5s step-end 3 alternate;
+			// animation: reveal 1.5s;
+			animation-delay: 2s;
 			animation-fill-mode: forwards;
 		}
 
 		&--2 {
-			// animation: typing 2s steps(22), blink 0.5s step-end 3 alternate;
-			animation-delay: 3s;
+			// animation: reveal 2s;
+			animation-delay: 4.5s;
 
 			animation-fill-mode: forwards;
 		}
 	}
 
 	&__btn {
-		border: solid 2px $color-black-1;
+		border: solid 2px $color-white-1;
 		border-radius: 10px;
 
 		&__link {
 			text-decoration: none;
-			color: $color-black-1;
+			color: $color-white-1;
 		}
 	}
 }
@@ -38,6 +40,6 @@
 
 	&__list__element__link {
 		text-decoration: none;
-		color: $color-black-1;
+		color: #faedf0;
 	}
 }

@@ -21,7 +21,7 @@ body {
   font-size: 2rem; }
 
 canvas {
-  background-color: #f2f2f2; }
+  background-color: #0e1212; }
 
 .header {
   display: flex;
@@ -42,12 +42,9 @@ canvas {
   top: 0;
   justify-content: flex-end;
   align-self: center;
-  width: 90%;
-  padding: 1.5rem 0;
-  z-index: 2;
-  background-color: #fffafa;
-  border-radius: 1rem;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; }
+  width: 100%;
+  padding: 0.5rem 0;
+  z-index: 2; }
   .navigation__list {
     display: flex;
     align-items: center;
@@ -64,14 +61,10 @@ canvas {
           transform: scale(1.1); }
 
 .main {
-  display: flex;
-  flex-direction: column;
-  align-self: center;
+  margin-left: 30%;
+  margin-right: 15rem;
   z-index: 2;
-  padding: 3rem 4rem;
-  border-radius: 1rem;
-  background-color: #fffafa;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; }
+  padding: 3rem 4rem; }
   .main__btn {
     opacity: 1;
     width: fit-content;
@@ -90,40 +83,27 @@ canvas {
   font-weight: 700;
   font-size: 5.4rem;
   white-space: nowrap;
-  overflow: hidden; }
+  overflow: hidden;
+  color: #fff; }
   .main__text--1 {
+    animation-delay: 2s;
     animation-fill-mode: forwards; }
   .main__text--2 {
-    animation-delay: 3s;
+    animation-delay: 4.5s;
     animation-fill-mode: forwards; }
 
 .main__btn {
-  border: solid 2px #000;
+  border: solid 2px #fff;
   border-radius: 10px; }
   .main__btn__link {
     text-decoration: none;
-    color: #000; }
+    color: #fff; }
 
 .navigation {
   font-size: 1.8rem; }
   .navigation__list__element__link {
     text-decoration: none;
-    color: #000; }
-
-@keyframes typing {
-  from {
-    opacity: 1;
-    width: 0; }
-  99% {
-    border-right: 3px solid; }
-  to {
-    opacity: 1;
-    width: 100%;
-    border: none; } }
-
-@keyframes blink {
-  50% {
-    border-color: transparent; } }
+    color: #faedf0; }
 
 @keyframes popup {
   0% {
@@ -131,7 +111,15 @@ canvas {
     transform: scale(0.7); }
   90% {
     opacity: 1;
-    transform: scale(1.2); }
+    transform: scale(1.05); }
   100% {
     opacity: 1;
     transform: scale(1); } }
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    width: 0; }
+  to {
+    opacity: 1;
+    width: 100%; } }
