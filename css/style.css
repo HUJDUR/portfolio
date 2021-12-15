@@ -18,7 +18,15 @@ body {
   width: 100%;
   font-family: 'Lato', sans-serif;
   font-weight: 500;
-  font-size: 2rem; }
+  font-size: 2rem;
+  -ms-overflow-style: none;
+  /* for Internet Explorer, Edge */
+  scrollbar-width: none;
+  /* for Firefox */
+  overflow-y: scroll; }
+  body::-webkit-scrollbar {
+    display: none;
+    /* for Chrome, Safari, and Opera */ }
 
 canvas {
   background-color: #0e1212; }
@@ -27,10 +35,11 @@ canvas {
   display: flex;
   position: absolute;
   top: 0;
-  height: 100vh;
+  height: 110%;
   width: 100vw;
   flex-direction: column;
   align-items: flex-start;
+  overflow: hidden;
   justify-content: center;
   background-blend-mode: darken;
   background-size: cover;
@@ -41,6 +50,7 @@ canvas {
   position: fixed;
   top: 0;
   justify-content: flex-end;
+  background-color: #0e1212;
   align-self: center;
   width: 100%;
   padding: 0.5rem 0;
@@ -60,12 +70,9 @@ canvas {
         .navigation__list__element:first-child:hover {
           transform: scale(1.1); }
 
-.main {
-  margin-left: 30%;
-  margin-right: 15rem;
-  z-index: 2;
-  padding: 3rem 4rem; }
-  .main__btn {
+.headline {
+  margin-left: 30%; }
+  .headline__btn {
     opacity: 1;
     width: fit-content;
     margin-top: 3rem;
@@ -74,10 +81,41 @@ canvas {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     animation-fill-mode: forwards;
     transition: transform 0.2s; }
-    .main__btn:hover {
+    .headline__btn:hover {
       transform: scale(1.05); }
 
-.main__text {
+.center {
+  display: flex;
+  width: 100%;
+  justify-content: space-between; }
+
+.contacts {
+  display: flex;
+  right: 1rem;
+  flex-direction: column;
+  align-self: center;
+  justify-self: flex-end;
+  margin-right: 1rem;
+  z-index: 1; }
+  .contacts__logo {
+    width: 3.5rem;
+    margin-bottom: 0.5rem; }
+
+.main {
+  z-index: 3; }
+
+.about-me {
+  display: flex;
+  justify-content: center;
+  height: 100rem;
+  clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
+  background-color: #fffef7;
+  position: relative;
+  top: -6rem; }
+  .about-me__cover {
+    margin-top: 10rem; }
+
+.headline__text {
   opacity: 1;
   font-family: 'Catamaran', sans-serif;
   font-weight: 700;
@@ -85,17 +123,17 @@ canvas {
   white-space: nowrap;
   overflow: hidden;
   color: #fff; }
-  .main__text--1 {
+  .headline__text--1 {
     animation-delay: 2s;
     animation-fill-mode: forwards; }
-  .main__text--2 {
+  .headline__text--2 {
     animation-delay: 4.5s;
     animation-fill-mode: forwards; }
 
-.main__btn {
+.headline__btn {
   border: solid 2px #fff;
   border-radius: 10px; }
-  .main__btn__link {
+  .headline__btn__link {
     text-decoration: none;
     color: #fff; }
 

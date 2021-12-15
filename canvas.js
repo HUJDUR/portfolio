@@ -1,61 +1,69 @@
 const canvas = document.getElementById('canvas');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+const header = document.getElementsByClassName('header');
+canvas.height = innerHeight + 100;
+canvas.width = innerWidth;
 const c = canvas.getContext('2d');
 
-// const Circle = function (x, y, radius, color) {
-// 	this.x = x;
-// 	this.y = y;
-// 	this.radius = radius;
-// 	this.color = color;
-
-// 	this.draw = function () {
-// 		c.beginPath();
-// 		c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-// 		c.fillStyle = this.color;
-// 		c.fill();
-// 		c.stroke();
-// 	};
-// };
-
-// const circle = new Circle(innerWidth / 4, innerHeight / 3, 10, '#e91e63');
-// circle.draw();
-
-const StraightLine = function (x, y, y2, dy, color) {
+const Circle = function (x, y, radius, color) {
 	this.x = x;
-	this.start = innerHeight;
 	this.y = y;
-	this.y2 = y2;
+	this.radius = radius;
+	this.r = 0;
+	this.color = color;
+
+	this.draw = function () {
+		c.beginPath();
+		c.arc(this.x, this.y, this.r, 0, Math.PI * 2, false);
+		c.fillStyle = this.color;
+		c.fill();
+		c.stroke();
+	};
+
+	this.update = function () {
+		// c.clearRect(0, 0, innerHeight, innerWidth);
+		if (this.radius > this.r) this.r += 0.5;
+		this.draw();
+	};
+};
+
+const StraightLine = function (x, y, end, dy, color) {
+	this.x = x;
+	this.y = y + 100;
+	this.end = end;
+	this.now = innerHeight;
 	this.dy = dy;
 	this.color = color;
 
 	this.draw = function () {
 		c.beginPath();
 		c.moveTo(this.x, this.y);
-		c.lineTo(this.x, this.start);
+		c.lineTo(this.x, this.now);
 		c.strokeStyle = this.color;
 		c.stroke();
-		c.closePath();
 	};
 
 	this.update = function () {
-		// console.log(this.start - this.y2);
-		if (this.start > this.y2) this.start = this.start - this.dy;
+		c.clearRect(0, 0, innerHeight, innerWidth);
+		if (this.now > this.end) this.now -= this.dy;
 		this.draw();
 	};
 };
 
-const animate = function () {
-	const line = new StraightLine(
-		innerWidth / 4,
-		innerHeight,
-		innerHeight / 3,
-		100,
-		'#e91e63'
-	);
+const line = new StraightLine(
+	innerWidth / 4,
+	innerHeight,
+	innerHeight / 3,
+	9,
+	'#e91e63'
+);
+const circle = new Circle(innerWidth / 4, innerHeight / 3, 10, '#e91e63');
 
+const animate = function () {
 	line.update();
+	circle.update();
 	requestAnimationFrame(animate);
 };
 
+// setTimeout(() => {
 animate();
+// }, 2500);

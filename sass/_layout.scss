@@ -2,11 +2,11 @@
 	display: flex;
 	position: absolute;
 	top: 0;
-	height: 100vh;
+	height: 110%;
 	width: 100vw;
 	flex-direction: column;
 	align-items: flex-start;
-	// background-color: #a1a2a3;
+	overflow: hidden;
 
 	justify-content: center;
 	background-blend-mode: darken;
@@ -19,6 +19,7 @@
 	position: fixed;
 	top: 0;
 	justify-content: flex-end;
+	background-color: $color-primary-1;
 	align-self: center;
 	width: 100%;
 	padding: 0.5rem 0;
@@ -48,15 +49,8 @@
 	}
 }
 
-.main {
-	// display: flex;
-	// flex-direction: column;
+.headline {
 	margin-left: 30%;
-	margin-right: 15rem;
-	z-index: 2;
-	padding: 3rem 4rem;
-	// background-color: #fffafa;
-
 	&__btn {
 		// opacity: 0;
 		opacity: 1;
@@ -72,5 +66,45 @@
 		&:hover {
 			transform: scale(1.05);
 		}
+	}
+}
+
+.center {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.contacts {
+	display: flex;
+	right: 1rem;
+	flex-direction: column;
+	align-self: center;
+	justify-self: flex-end;
+	margin-right: 1rem;
+
+	z-index: 1;
+
+	&__logo {
+		width: 3.5rem;
+		margin-bottom: 0.5rem;
+	}
+}
+
+.main {
+	z-index: 3;
+}
+
+.about-me {
+	display: flex;
+	justify-content: center;
+	height: 100rem;
+	clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
+	background-color: #fffef7;
+	position: relative;
+	top: -6rem;
+
+	&__cover {
+		margin-top: 10rem;
 	}
 }
