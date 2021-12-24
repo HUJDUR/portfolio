@@ -102,10 +102,10 @@
 .about-me {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: flex-start;
 	height: 120rem;
 	clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
-	background-color: $color-black-1;
+	background-color: $color-primary-2;
 	// background-color: #6e72fc;
 	// background-image: linear-gradient(315deg, #6e72fc 0%, #ad1deb 74%);
 
@@ -115,23 +115,29 @@
 
 	&::before {
 		content: '';
+		z-index: -1;
+		left: 0;
 		height: 121rem;
 		width: 100%;
 		display: block;
 		position: absolute;
-		top: 2px;
-		left: 2px;
+		top: 3px;
+
 		clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
-		background-color: $color-white-2;
+		background-color: #5b6467;
 	}
 
 	&__text {
 		display: flex;
+		width: 55%;
+		margin-left: 3rem;
 		flex-direction: column;
 		align-items: center;
 		background-color: $color-white-2;
 		border-radius: 1rem;
 		margin-top: 20rem;
+
+		border: 1px solid $color-black-1;
 
 		// &__message {
 		// 	width: 100%;
