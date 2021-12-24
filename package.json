@@ -3,7 +3,9 @@
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.html",
-	"dependencies": {},
+	"dependencies": {
+		"smooth-scrollbar": "^8.7.0"
+	},
 	"devDependencies": {
 		"node-sass": "^6.0.1",
 		"sass": "^1.44.0"

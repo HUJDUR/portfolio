@@ -54,9 +54,9 @@ const line = new StraightLine(
 	innerHeight,
 	innerHeight / 3,
 	9,
-	'#e91e63'
+	'#10a5F5'
 );
-const circle = new Circle(innerWidth / 4, innerHeight / 3, 10, '#e91e63');
+const circle = new Circle(innerWidth / 4, innerHeight / 3, 10, '#10a5F5');
 
 const animate = function () {
 	line.update();

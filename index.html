@@ -15,11 +15,14 @@
 		<script defer src="canvas.js"></script>
 		<script defer src="header.js"></script>
 
+		<!-- <script defer src="/smooth-scrollbar/dist/smooth-scrollbar.js"></script>
+		<script defer src="index.js"></script> -->
+
 		<link rel="stylesheet" href="css/style.css" />
 
 		<title>Nadir Hujdur</title>
 	</head>
-	<body>
+	<body id="my-scrollbar">
 		<canvas id="canvas"></canvas>
 		<header class="header">
 			<nav class="navigation">
@@ -82,13 +85,15 @@
 
 		<main class="main">
 			<div class="about-me">
-				<h2 class="about-me__cover">About me</h2>
-				<p class="about-me__message">
-					A 19 year old developer with a big dream that goes beyond software
-					development. <br />
-					Currently a student at Faculty of information technologies in Mostar
-					and alumnist of Behram-begova medresa in Tuzla.
-				</p>
+				<div class="about-me__text">
+					<h2 class="about-me__text__cover">About me</h2>
+					<p class="about-me__text__message">
+						A 19 year old developer with a big dream that goes beyond software
+						development. <br />
+						Currently a student at Faculty of information technologies in Mostar
+						and alumnist of Behram-begova medresa in Tuzla.
+					</p>
+				</div>
 			</div>
 			<div class="projects"></div>
 		</main>

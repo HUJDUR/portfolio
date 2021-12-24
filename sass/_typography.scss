@@ -34,6 +34,7 @@
 		}
 	}
 }
+
 .navigation {
 	font-size: 1.8rem;
 
@@ -44,13 +45,16 @@
 }
 
 .about-me {
-	&__cover {
-		padding: 9rem 0.5rem;
-		font-size: 3rem;
-	}
+	&__text {
+		padding: 3rem;
+		&__cover {
+			padding: 0 0rem 9rem;
+			font-size: 3rem;
+		}
 
-	&__message {
-		text-align: center;
-		font-size: 2.5rem;
+		&__message {
+			text-align: center;
+			font-size: 2.5rem;
+		}
 	}
 }

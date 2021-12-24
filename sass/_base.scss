@@ -2,9 +2,10 @@ $color-grey-1: #c1c1c1;
 
 $color-black-1: #000;
 $color-white-1: #fff;
+$color-white-2: #fffef7;
 
 $color-primary-1: #0e1212;
-$color-primary-2: #ff2121;
+$color-primary-2: #10a5f5;
 
 * {
 	margin: 0;
@@ -32,16 +33,20 @@ body {
 	font-weight: 500;
 	font-size: 2rem;
 
-	-ms-overflow-style: none; /* for Internet Explorer, Edge */
-	scrollbar-width: none; /* for Firefox */
+	-ms-overflow-style: none;
+	scrollbar-width: none;
 	overflow-y: scroll;
 
 	&::-webkit-scrollbar {
-		display: none; /* for Chrome, Safari, and Opera */
+		display: none;
 	}
 }
 
 canvas {
-	background-color: $color-primary-1;
+	// background-color: $color-primary-1;
+
+	background-color: #7f5a83;
+	background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+
 	// background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
 }
