@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+		<!-- Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -12,6 +13,17 @@
 			rel="stylesheet"
 		/>
 
+		<!-- Mapbox -->
+
+		<script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
+		<link
+			href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css"
+			rel="stylesheet"
+		/>
+
+		<!-- My JavaScript files -->
+
+		<script defer src="mapbox.js"></script>
 		<script defer src="canvas.js"></script>
 		<script defer src="header.js"></script>
 
@@ -27,9 +39,9 @@
 		<header class="header">
 			<nav class="navigation">
 				<ul class="navigation__list">
-					<a class="navigation__list__element__link" href="#">
-						<li class="navigation__list__element">Home</li>
-					</a>
+					<li class="navigation__list__element">
+						<a class="navigation__list__element__link" href="#">Home</a>
+					</li>
 
 					<li class="navigation__list__element">
 						<a class="navigation__list__element__link" href="#">About Me</a>
@@ -84,14 +96,16 @@
 		<!-- <section class="blur"></section> -->
 
 		<main class="main">
-			<div class="about-me">
+			<div class="about-me" id="map">
 				<div class="about-me__text">
 					<h2 class="about-me__text__cover">About me</h2>
 					<p class="about-me__text__message">
 						A 19 year old developer with a big dream that goes beyond software
 						development. <br />
 						Currently a student at Faculty of information technologies in Mostar
-						and alumnist of Behram-begova medresa in Tuzla.
+						and alumnist of Behram-begova medresa in Tuzla. Every day working on
+						improving myself and my mindset towards the world. Love coding in
+						JavaScript, while currently learning React. <br />
 					</p>
 				</div>
 			</div>

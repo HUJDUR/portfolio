@@ -1,0 +1,13 @@
+.marker {
+	background-image: url(/img/location-pin.png);
+	background-size: cover;
+	height: 3.5rem;
+	width: 2.8rem;
+	margin-bottom: 2rem;
+	z-index: 5;
+	transition: transform 0.3s;
+
+	&:hover {
+		transform: scale(1.1);
+	}
+}

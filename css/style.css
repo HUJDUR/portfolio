@@ -27,8 +27,7 @@ body {
     display: none; }
 
 canvas {
-  background-color: #7f5a83;
-  background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%); }
+  background-image: linear-gradient(315deg, #58759d 0%, #2d3748 74%); }
 
 .header {
   display: flex;
@@ -107,7 +106,7 @@ canvas {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  height: 120rem;
+  height: 92rem;
   clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
   background-color: #10a5f5;
   position: relative;
@@ -123,21 +122,19 @@ canvas {
     position: absolute;
     top: 3px;
     clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
-    background-color: #5b6467; }
+    background-color: #2d3748; }
   .about-me__text {
-    display: flex;
+    background-color: #424d5c;
+    border-radius: 0.2rem;
     width: 55%;
-    margin-left: 3rem;
+    margin-left: 5rem;
     flex-direction: column;
     align-items: center;
-    background-color: #fffef7;
-    border-radius: 1rem;
-    margin-top: 20rem;
-    border: 1px solid #000; }
+    margin-top: 20rem; }
 
 .projects {
   position: relative;
-  height: 100rem;
+  height: 115rem;
   background-color: #0e1212;
   top: -12.5rem;
   z-index: 1; }
@@ -171,12 +168,15 @@ canvas {
     color: #faedf0; }
 
 .about-me__text {
-  padding: 3rem; }
+  padding: 3rem;
+  color: #fff;
+  line-height: 2.5rem;
+  z-index: 2; }
   .about-me__text__cover {
     padding: 0 0rem 6rem;
-    font-size: 2.5rem; }
+    font-size: 3.5rem; }
   .about-me__text__message {
-    font-size: 2rem; }
+    font-size: 2.5rem; }
 
 @keyframes popup {
   0% {
@@ -196,3 +196,14 @@ canvas {
   to {
     opacity: 1;
     width: 100%; } }
+
+.marker {
+  background-image: url(/img/location-pin.png);
+  background-size: cover;
+  height: 3.5rem;
+  width: 2.8rem;
+  margin-bottom: 2rem;
+  z-index: 5;
+  transition: transform 0.3s; }
+  .marker:hover {
+    transform: scale(1.1); }
