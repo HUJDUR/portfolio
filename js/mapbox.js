@@ -40,3 +40,15 @@ locations.forEach((location) => {
 // 		left: 100,
 // 	},
 // });
+
+let popup = new mapboxgl.Popup({
+	offset: [0, -7],
+	closeButton: false,
+	closeOnClick: false,
+});
+
+map.on('mouseenter', 'test', function (e) {
+	map.getCanvas().style.cursor = 'pointer';
+
+	popup.setLngLat();
+});
