@@ -45,6 +45,7 @@
 
 				&:hover {
 					transform: scale(1.1);
+					cursor: pointer;
 				}
 			}
 		}
@@ -53,17 +54,22 @@
 
 .headline {
 	margin-left: 30%;
+	display: flex;
+	flex-direction: column;
 	&__btn {
 		// opacity: 0;
 		opacity: 1;
-		width: fit-content;
+		width: auto;
 		margin-top: 3rem;
-		align-self: center;
 		padding: 1rem 2.5rem;
 		box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 		// animation: popup 1.5s ease-in 7s;
 		animation-fill-mode: forwards;
 		transition: transform 0.2s;
+
+		&__link {
+			width: fit-content;
+		}
 
 		&:hover {
 			transform: scale(1.05);
@@ -79,7 +85,7 @@
 	z-index: 1000;
 }
 
-.contacts {
+.contacts-side {
 	display: flex;
 	right: 1rem;
 	flex-direction: column;
@@ -126,7 +132,7 @@
 	// }
 
 	&__text {
-		background-color: #2b3033;
+		background-color: $color-primary-1;
 		border-radius: 0.5rem;
 		width: 52%;
 		margin-left: 5rem;
@@ -139,14 +145,105 @@
 
 .projects {
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	align-content: center;
 	position: relative;
-	height: 130rem;
-	background-color: $color-primary-1;
+	height: 102.5rem;
+	background-image: linear-gradient(top, #141821, $color-primary-1);
 
 	top: -12.5rem;
 
+	&::after {
+		content: '';
+		display: block;
+		z-index: -1;
+		left: 0;
+		height: 115rem;
+		width: 100%;
+		position: absolute;
+		left: 0;
+		background-color: $color-primary-1;
+	}
+
 	&__headline {
-		margin-top: 6rem;
+		margin-top: 15rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		&__2 {
+			margin-top: 3rem;
+		}
+	}
+
+	&__cards {
+		margin-top: 10rem;
+		flex-grow: 2;
+		display: flex;
+		justify-content: space-around;
+	}
+
+	&__card {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: 55rem;
+		width: 30%;
+		background-color: $color-grey-1;
+		border-radius: 1rem;
+		box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+		padding: 4rem 2rem;
+		transition: all 1s;
+
+		&:hover {
+			transform: scale(1.05);
+		}
+
+		&__name {
+			height: 20%;
+		}
+
+		&__description {
+			height: 80%;
+		}
+
+		&__1 {
+			background-image: linear-gradient(to bottom right, #fe5f75, #fc9842);
+		}
+
+		&__2 {
+			background-image: linear-gradient(to bottom right, #667eea, #764ba2);
+		}
+
+		&__3 {
+			background-image: linear-gradient(to bottom right, #b91372, #6b0f1a);
+		}
+
+		&__link {
+			text-decoration: none;
+			border: 1px solid $color-white-1;
+			padding: 2rem 3rem;
+			border-radius: 1rem;
+			transition: transform 0.7s;
+			margin-bottom: 2rem;
+
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+	}
+}
+
+.contacts {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 45rem;
+	background-image: linear-gradient(to bottom, $color-primary-1, #141821);
+
+	&__text {
+		&__message {
+			margin-top: 10rem;
+		}
 	}
 }

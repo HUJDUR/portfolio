@@ -27,7 +27,8 @@ body {
     display: none; }
 
 canvas {
-  background-image: linear-gradient(315deg, #485563 0%, #29323c 74%); }
+  background-color: #310e68;
+  background-image: linear-gradient(316deg, #310e68 0%, #5f0f40 74%); }
 
 .header {
   display: flex;
@@ -65,19 +66,23 @@ canvas {
         box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
         transition: transform 0.2s; }
         .navigation__list__element:first-child:hover {
-          transform: scale(1.1); }
+          transform: scale(1.1);
+          cursor: pointer; }
 
 .headline {
-  margin-left: 30%; }
+  margin-left: 30%;
+  display: flex;
+  flex-direction: column; }
   .headline__btn {
     opacity: 1;
-    width: fit-content;
+    width: auto;
     margin-top: 3rem;
-    align-self: center;
     padding: 1rem 2.5rem;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     animation-fill-mode: forwards;
     transition: transform 0.2s; }
+    .headline__btn__link {
+      width: fit-content; }
     .headline__btn:hover {
       transform: scale(1.05); }
 
@@ -87,7 +92,7 @@ canvas {
   justify-content: space-between;
   z-index: 1000; }
 
-.contacts {
+.contacts-side {
   display: flex;
   right: 1rem;
   flex-direction: column;
@@ -95,7 +100,7 @@ canvas {
   justify-self: flex-end;
   margin-right: 1rem;
   z-index: 1; }
-  .contacts__logo {
+  .contacts-side__logo {
     width: 3.5rem;
     margin-bottom: 0.5rem; }
 
@@ -113,7 +118,7 @@ canvas {
   top: -6.5rem;
   z-index: 2; }
   .about-me__text {
-    background-color: #2b3033;
+    background-color: #0e1212;
     border-radius: 0.5rem;
     width: 52%;
     margin-left: 5rem;
@@ -123,13 +128,75 @@ canvas {
 
 .projects {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-content: center;
   position: relative;
-  height: 130rem;
-  background-color: #0e1212;
+  height: 102.5rem;
+  background-image: linear-gradient(top, #141821, #0e1212);
   top: -12.5rem; }
+  .projects::after {
+    content: '';
+    display: block;
+    z-index: -1;
+    left: 0;
+    height: 115rem;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    background-color: #0e1212; }
   .projects__headline {
-    margin-top: 6rem; }
+    margin-top: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .projects__headline__2 {
+      margin-top: 3rem; }
+  .projects__cards {
+    margin-top: 10rem;
+    flex-grow: 2;
+    display: flex;
+    justify-content: space-around; }
+  .projects__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 55rem;
+    width: 30%;
+    background-color: #c1c1c1;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    padding: 4rem 2rem;
+    transition: all 1s; }
+    .projects__card:hover {
+      transform: scale(1.05); }
+    .projects__card__name {
+      height: 20%; }
+    .projects__card__description {
+      height: 80%; }
+    .projects__card__1 {
+      background-image: linear-gradient(to bottom right, #fe5f75, #fc9842); }
+    .projects__card__2 {
+      background-image: linear-gradient(to bottom right, #667eea, #764ba2); }
+    .projects__card__3 {
+      background-image: linear-gradient(to bottom right, #b91372, #6b0f1a); }
+    .projects__card__link {
+      text-decoration: none;
+      border: 1px solid #fff;
+      padding: 2rem 3rem;
+      border-radius: 1rem;
+      transition: transform 0.7s;
+      margin-bottom: 2rem; }
+      .projects__card__link:hover {
+        transform: scale(1.1); }
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 45rem;
+  background-image: linear-gradient(to bottom, #0e1212, #141821); }
+  .contacts__text__message {
+    margin-top: 10rem; }
 
 .headline__text {
   opacity: 1;
@@ -172,8 +239,32 @@ canvas {
 
 .projects__headline {
   color: #fff;
-  font-size: 4rem;
   font-family: 'Catamaran', sans-serif; }
+  .projects__headline__1 {
+    font-size: 4rem; }
+  .projects__headline__2 {
+    font-size: 2.5rem; }
+
+.projects__cards {
+  text-align: center;
+  color: #fff; }
+
+.projects__card__name {
+  font-size: 3.5rem; }
+
+.projects__card__description {
+  font-size: 2.2rem; }
+
+.projects__card__link {
+  color: #fff; }
+
+.contacts {
+  color: #fff; }
+  .contacts__text {
+    font-size: 2.5rem; }
+    .contacts__text__link {
+      text-decoration: none;
+      color: #1fd1f9; }
 
 @keyframes popup {
   0% {

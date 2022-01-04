@@ -1,7 +1,7 @@
 window.addEventListener('scroll', (e) => {
 	const headline = document.querySelector('.headline');
 	const btn = document.querySelector('.headline__btn');
-	const contacts = document.querySelector('.contacts');
+	const contacts = document.querySelector('.contacts-side');
 
 	const scrollPosition = window.pageYOffset;
 
