@@ -26,47 +26,35 @@ body {
   body::-webkit-scrollbar {
     display: none; }
 
-canvas {
-  background-image: linear-gradient(to top right, #212f45 0%, #1b3a4b 74%); }
-
 .header {
   display: flex;
-  position: absolute;
-  top: 0;
-  height: 110vh;
-  width: 100vw;
-  flex-direction: column;
-  align-items: flex-start;
-  overflow: hidden;
-  justify-content: center;
-  background-blend-mode: darken;
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.navigation {
-  display: flex;
-  position: absolute;
-  top: 0;
-  justify-content: flex-end;
-  align-self: center;
-  width: 100%;
-  padding: 0.9rem 0;
-  z-index: 3; }
-  .navigation__list {
+  height: 110vh; }
+  .header__landing-page--1 {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: linear-gradient(#141821, #0e1212); }
+    .header__landing-page--1__navigation {
+      display: flex;
+      height: 55%;
+      margin-bottom: 10rem;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around; }
+      .header__landing-page--1__navigation__link {
+        text-decoration: none; }
+  .header__landing-page--2 {
+    width: 80%;
     display: flex;
     align-items: center;
-    list-style-type: none; }
-    .navigation__list__element {
-      margin-right: 5rem; }
-      .navigation__list__element:first-child {
-        border: solid 2px #e9c46a;
-        padding: 0.6rem 1rem;
-        border-radius: 1rem;
-        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-        transition: transform 0.2s; }
-        .navigation__list__element:first-child:hover {
-          transform: scale(1.1);
-          cursor: pointer; }
+    background-color: #42378f;
+    background-image: linear-gradient(315deg, #42378f 0%, #f53844 74%); }
+    .header__landing-page--2__text {
+      height: 40%;
+      margin-bottom: 10rem;
+      padding: 8rem 10rem;
+      border-radius: 1rem; }
 
 .headline {
   margin-left: 30%;
@@ -112,12 +100,11 @@ canvas {
   align-items: flex-start;
   height: 92rem;
   clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
-  background-color: #10a5f5;
   position: relative;
   top: -6.5rem;
   z-index: 2; }
   .about-me__text {
-    background-color: #1b3a4b;
+    background-image: linear-gradient(#141821, #0e1212);
     border-radius: 0.5rem;
     width: 52%;
     margin-left: 5rem;
@@ -131,7 +118,7 @@ canvas {
   align-content: center;
   position: relative;
   height: 102.5rem;
-  background-image: linear-gradient(top, #141821, #0e1212);
+  background-image: linear-gradient(#141821, #0e1212);
   top: -12.5rem; }
   .projects::after {
     content: '';
@@ -197,33 +184,14 @@ canvas {
   .contacts__text__message {
     margin-top: 10rem; }
 
-.headline__text {
-  opacity: 1;
-  font-family: 'Catamaran', sans-serif;
-  font-weight: 700;
-  font-size: 5.4rem;
-  white-space: nowrap;
-  overflow: hidden;
+.header__landing-page--1__navigation__link {
+  font-style: italic;
+  font-size: 2.5rem;
   color: #fff; }
-  .headline__text--1 {
-    animation-delay: 2s;
-    animation-fill-mode: forwards; }
-  .headline__text--2 {
-    animation-delay: 4.5s;
-    animation-fill-mode: forwards; }
 
-.headline__btn {
-  border: solid 2px #e9c46a;
-  border-radius: 10px; }
-  .headline__btn__link {
-    text-decoration: none;
-    color: #fff; }
-
-.navigation {
-  font-size: 1.8rem; }
-  .navigation__list__element__link {
-    text-decoration: none;
-    color: #faedf0; }
+.header__landing-page--2 {
+  color: #000;
+  font-size: 2.8rem; }
 
 .about-me__text {
   padding: 3rem;

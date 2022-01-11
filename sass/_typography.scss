@@ -1,46 +1,65 @@
-.headline {
-	&__text {
-		// opacity: 0;
-		opacity: 1;
-		font-family: 'Catamaran', sans-serif;
-		font-weight: 700;
-		font-size: 5.4rem;
-		white-space: nowrap;
-		overflow: hidden;
-		// border-right: 3px solid;
-		color: $color-white-1;
+// .headline {
+// 	&__text {
+// 		// opacity: 0;
+// 		opacity: 1;
+// 		font-family: 'Catamaran', sans-serif;
+// 		font-weight: 700;
+// 		font-size: 5.4rem;
+// 		white-space: nowrap;
+// 		overflow: hidden;
+// 		// border-right: 3px solid;
+// 		color: $color-white-1;
 
+// 		&--1 {
+// 			// animation: reveal 1.5s;
+// 			animation-delay: 2s;
+// 			animation-fill-mode: forwards;
+// 		}
+
+// 		&--2 {
+// 			// animation: reveal 2s;
+// 			animation-delay: 4.5s;
+
+// 			animation-fill-mode: forwards;
+// 		}
+// 	}
+
+// 	&__btn {
+// 		border: solid 2px #e9c46a;
+// 		border-radius: 10px;
+
+// 		&__link {
+// 			text-decoration: none;
+// 			color: $color-white-1;
+// 		}
+// 	}
+// }
+
+// .navigation {
+// 	font-size: 1.8rem;
+
+// 	&__list__element__link {
+// 		text-decoration: none;
+// 		color: #faedf0;
+// 	}
+// }
+
+.header {
+	&__landing-page {
 		&--1 {
-			// animation: reveal 1.5s;
-			animation-delay: 2s;
-			animation-fill-mode: forwards;
+			&__navigation {
+				&__link {
+					font-style: italic;
+					font-size: 2.5rem;
+					color: $color-white-1;
+				}
+			}
 		}
 
 		&--2 {
-			// animation: reveal 2s;
-			animation-delay: 4.5s;
-
-			animation-fill-mode: forwards;
+			color: $color-black-1;
+			font-size: 2.8rem;
 		}
-	}
-
-	&__btn {
-		border: solid 2px #e9c46a;
-		border-radius: 10px;
-
-		&__link {
-			text-decoration: none;
-			color: $color-white-1;
-		}
-	}
-}
-
-.navigation {
-	font-size: 1.8rem;
-
-	&__list__element__link {
-		text-decoration: none;
-		color: #faedf0;
 	}
 }
 
