@@ -51,14 +51,22 @@
 				&__link {
 					font-style: italic;
 					font-size: 2.5rem;
-					color: $color-white-1;
+					color: $color-black-1;
 				}
 			}
 		}
 
 		&--2 {
-			color: $color-black-1;
-			font-size: 2.8rem;
+			display: flex;
+			justify-content: center;
+			text-align: center;
+			font-family: 'Roboto', sans-serif;
+
+			letter-spacing: 1.5px;
+			font-weight: 400;
+			line-height: 6rem;
+			color: $color-white-1;
+			font-size: 3.2rem;
 		}
 	}
 }

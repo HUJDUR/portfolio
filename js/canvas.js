@@ -1,6 +1,6 @@
 const canvas = document.getElementById('canvas');
 const header = document.getElementsByClassName('header');
-canvas.height = innerHeight;
+canvas.height = innerHeight + 115;
 canvas.width = innerWidth;
 const c = canvas.getContext('2d');
 
@@ -11,12 +11,21 @@ const animate = function () {
 
 	c.clearRect(0, 0, canvas.width, canvas.height);
 	c.beginPath();
-	c.moveTo(canvas.width / 5, 0);
+	c.moveTo(canvas.width / 4, 0);
 
 	for (let i = 0; i < canvas.height; i++) {
-		c.lineTo(canvas.width / 5 + Math.sin(i * -0.003 + frequncy) * 35, i);
+		let x =
+			canvas.width / 4 -
+			35 +
+			Math.sin(i * -0.003 + frequncy) * 30 * Math.sin(frequncy);
+
+		c.lineTo(x, i);
+		c.moveTo(0, i);
+		c.lineTo(x, i);
 	}
+	c.strokeStyle = '#0e1212';
 	c.stroke();
+
 	frequncy += 0.01;
 };
 

@@ -26,19 +26,29 @@ body {
   body::-webkit-scrollbar {
     display: none; }
 
+canvas {
+  top: 0;
+  position: absolute; }
+
 .header {
   display: flex;
-  height: 110vh; }
+  height: 110vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: #29539b;
+  background-image: linear-gradient(315deg, #29539b 0%, #1e3b70 74%); }
   .header__landing-page--1 {
     width: 20%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: linear-gradient(#141821, #0e1212); }
+    z-index: 10; }
     .header__landing-page--1__navigation {
       display: flex;
       height: 55%;
+      width: 80%;
       margin-bottom: 10rem;
+      margin-left: 5rem;
       flex-direction: column;
       align-items: center;
       justify-content: space-around; }
@@ -47,9 +57,7 @@ body {
   .header__landing-page--2 {
     width: 80%;
     display: flex;
-    align-items: center;
-    background-color: #42378f;
-    background-image: linear-gradient(315deg, #42378f 0%, #f53844 74%); }
+    align-items: center; }
     .header__landing-page--2__text {
       height: 40%;
       margin-bottom: 10rem;
@@ -187,11 +195,18 @@ body {
 .header__landing-page--1__navigation__link {
   font-style: italic;
   font-size: 2.5rem;
-  color: #fff; }
+  color: #000; }
 
 .header__landing-page--2 {
-  color: #000;
-  font-size: 2.8rem; }
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1.5px;
+  font-weight: 400;
+  line-height: 6rem;
+  color: #fff;
+  font-size: 3.2rem; }
 
 .about-me__text {
   padding: 3rem;
