@@ -35,8 +35,8 @@ canvas {
   height: 110vh;
   width: 100%;
   overflow: hidden;
-  background-color: #29539b;
-  background-image: linear-gradient(315deg, #29539b 0%, #1e3b70 74%); }
+  background-color: #ee8e6b;
+  background-image: linear-gradient(315deg, #ee8e6b 0%, #ef6da0 74%); }
   .header__landing-page--1 {
     width: 20%;
     display: flex;
@@ -57,7 +57,13 @@ canvas {
   .header__landing-page--2 {
     width: 80%;
     display: flex;
-    align-items: center; }
+    align-items: flex-start;
+    margin-top: 5rem; }
+    .header__landing-page--2__container {
+      height: 90vh;
+      width: 85%;
+      background-color: #c7cedb;
+      border-radius: 2rem; }
     .header__landing-page--2__text {
       height: 40%;
       margin-bottom: 10rem;
@@ -193,19 +199,19 @@ canvas {
     margin-top: 10rem; }
 
 .header__landing-page--1__navigation__link {
-  font-style: italic;
   font-size: 2.5rem;
-  color: #000; }
+  color: #fff; }
 
 .header__landing-page--2 {
   display: flex;
   justify-content: center;
   text-align: center;
   font-family: 'Roboto', sans-serif;
+  font-style: italic;
   letter-spacing: 1.5px;
   font-weight: 400;
   line-height: 6rem;
-  color: #fff;
+  color: #e1e1e1;
   font-size: 3.2rem; }
 
 .about-me__text {

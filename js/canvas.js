@@ -1,6 +1,6 @@
 const canvas = document.getElementById('canvas');
 const header = document.getElementsByClassName('header');
-canvas.height = innerHeight + 115;
+canvas.height = innerHeight + 100;
 canvas.width = innerWidth;
 const c = canvas.getContext('2d');
 
