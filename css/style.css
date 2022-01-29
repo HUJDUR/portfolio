@@ -35,8 +35,7 @@ canvas {
   height: 110vh;
   width: 100%;
   overflow: hidden;
-  background-color: #ee8e6b;
-  background-image: linear-gradient(315deg, #ee8e6b 0%, #ef6da0 74%); }
+  background-image: linear-gradient(315deg, #c33764 0%, #1d2671 74%); }
   .header__landing-page--1 {
     width: 20%;
     display: flex;
@@ -57,18 +56,22 @@ canvas {
   .header__landing-page--2 {
     width: 80%;
     display: flex;
-    align-items: flex-start;
-    margin-top: 5rem; }
-    .header__landing-page--2__container {
-      height: 90vh;
-      width: 85%;
-      background-color: #c7cedb;
-      border-radius: 2rem; }
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
     .header__landing-page--2__text {
-      height: 40%;
-      margin-bottom: 10rem;
-      padding: 8rem 10rem;
       border-radius: 1rem; }
+    .header__landing-page--2__btn {
+      text-decoration: none;
+      z-index: 10;
+      padding: 0.3rem 2rem;
+      border: 1px solid #e1e1e1;
+      border-radius: 1rem;
+      margin-top: 5rem;
+      transition: transform 0.5s; }
+      .header__landing-page--2__btn:hover {
+        cursor: pointer;
+        transform: scale(1.05); }
 
 .headline {
   margin-left: 30%;
@@ -118,7 +121,7 @@ canvas {
   top: -6.5rem;
   z-index: 2; }
   .about-me__text {
-    background-image: linear-gradient(#141821, #0e1212);
+    background-color: #0d1117;
     border-radius: 0.5rem;
     width: 52%;
     margin-left: 5rem;
@@ -198,27 +201,39 @@ canvas {
   .contacts__text__message {
     margin-top: 10rem; }
 
+.mapboxgl-popup {
+  z-index: 11; }
+  .mapboxgl-popup-content {
+    border-radius: 1rem;
+    padding: 2rem 2rem; }
+
 .header__landing-page--1__navigation__link {
+  font-family: 'Montserrat', sans-serif;
   font-size: 2.5rem;
+  font-weight: 300;
   color: #fff; }
 
 .header__landing-page--2 {
   display: flex;
   justify-content: center;
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-  font-style: italic;
-  letter-spacing: 1.5px;
-  font-weight: 400;
+  text-align: right;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
   line-height: 6rem;
   color: #e1e1e1;
-  font-size: 3.2rem; }
+  font-size: 5rem; }
+  .header__landing-page--2__btn {
+    color: #e1e1e1;
+    font-size: 2rem;
+    font-weight: 300; }
 
 .about-me__text {
   padding: 3rem;
   color: #fff;
   line-height: 2.5rem;
-  z-index: 2; }
+  z-index: 2;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300; }
   .about-me__text__cover {
     padding: 0 0rem 6rem;
     font-size: 3.5rem; }
@@ -226,25 +241,27 @@ canvas {
     font-size: 2rem; }
 
 .projects__headline {
-  color: #fff;
-  font-family: 'Catamaran', sans-serif; }
+  color: #fff; }
   .projects__headline__1 {
     font-size: 4rem; }
   .projects__headline__2 {
-    font-size: 2.5rem; }
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300; }
 
 .projects__cards {
   text-align: center;
   color: #fff; }
 
-.projects__card__name {
-  font-size: 3.5rem; }
-
-.projects__card__description {
-  font-size: 2.2rem; }
-
-.projects__card__link {
-  color: #fff; }
+.projects__card {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300; }
+  .projects__card__name {
+    font-size: 3.5rem; }
+  .projects__card__description {
+    font-size: 2.2rem; }
+  .projects__card__link {
+    color: #fff; }
 
 .contacts {
   color: #fff; }
@@ -253,6 +270,18 @@ canvas {
     .contacts__text__link {
       text-decoration: none;
       color: #1fd1f9; }
+
+.mapboxgl-popup-content {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  background-color: #0d1117;
+  color: #fff; }
+  .mapboxgl-popup-content__header {
+    font-size: 1.7rem;
+    text-align: center; }
+  .mapboxgl-popup-content__description {
+    font-size: 1.5rem;
+    margin-top: 0.7rem; }
 
 @keyframes popup {
   0% {

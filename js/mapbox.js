@@ -2,10 +2,26 @@ mapboxgl.accessToken =
 	'pk.eyJ1IjoibmFkaXJodWpkdXIiLCJhIjoiY2t4dnFnNmFrMXp3MTJwbXZnMWgxbXJpYSJ9.2ab3QSklErh6eEDmSqjrRA';
 
 const locations = [
-	{ city: 'Teslic', coordinates: [17.8595, 44.6063] },
-	{ city: 'Bosanski Samac', coordinates: [18.469, 45.0611] },
-	{ city: 'Tuzla', coordinates: [18.6734, 44.58] },
-	{ city: 'Mostar', coordinates: [17.8, 43.39] },
+	{
+		city: 'Teslic',
+		coordinates: [17.8595, 44.6063],
+		description: 'City in which I was born.',
+	},
+	{
+		city: 'Bosanski Samac',
+		coordinates: [18.469, 45.0611],
+		description: 'Current job location.',
+	},
+	{
+		city: 'Tuzla',
+		coordinates: [18.6734, 44.58],
+		description: 'Where I finished my high school education.',
+	},
+	{
+		city: 'Mostar',
+		coordinates: [17.8, 43.39],
+		description: "Where I'm currently attending college.",
+	},
 ];
 
 let map = new mapboxgl.Map({
@@ -16,8 +32,6 @@ let map = new mapboxgl.Map({
 	interactive: false,
 });
 
-// const bounds = new mapboxgl.LngLatBounds();
-
 locations.forEach((location) => {
 	const el = document.createElement('div');
 	el.className = 'marker';
@@ -25,21 +39,15 @@ locations.forEach((location) => {
 	new mapboxgl.Marker({
 		element: el,
 		anchor: 'bottom',
-		// offset: 30,
 	})
 		.setLngLat(location.coordinates)
+		.setPopup(
+			new mapboxgl.Popup({ offset: 40 }).setHTML(
+				`<p class="mapboxgl-popup-content__header">${location.city}</p> <p class="mapboxgl-popup-content__description">${location.description}</p>`
+			)
+		)
 		.addTo(map);
-	// bounds.extend(location.coordinates);
 });
-
-// map.fitBounds({
-// 	padding: {
-// 		top: 200,
-// 		bottom: 200,
-// 		right: 100,
-// 		left: 100,
-// 	},
-// });
 
 let popup = new mapboxgl.Popup({
 	offset: [0, -7],

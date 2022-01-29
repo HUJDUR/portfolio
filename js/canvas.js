@@ -23,7 +23,7 @@ const animate = function () {
 		c.moveTo(0, i);
 		c.lineTo(x, i);
 	}
-	c.strokeStyle = '#0e1212';
+	c.strokeStyle = 'rgba(34, 34, 34, 0.45)';
 	c.stroke();
 
 	frequncy += 0.01;
