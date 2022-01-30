@@ -12,12 +12,18 @@
 			href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap"
 			rel="stylesheet"
 		/>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,200;1,300;1,400;1,500&family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,200;1,300;1,400;1,500&family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+			rel="stylesheet"
+		/>
 
 		<!-- Mapbox -->
 
@@ -33,23 +39,39 @@
 		<script defer src="./js/canvas.js"></script>
 		<script defer src="./js/header.js"></script>
 
-		<!-- <script defer src="/smooth-scrollbar/dist/smooth-scrollbar.js"></script>
-		<script defer src="index.js"></script> -->
+		<script defer src="/smooth-scrollbar/dist/smooth-scrollbar.js"></script>
+		<script defer src="index.js"></script>
 
 		<link rel="stylesheet" href="css/style.css" />
 
 		<title>Nadir Hujdur</title>
 	</head>
 	<body id="my-scrollbar">
-		
-		<header class="header">
+		<section class="loader">
+			<svg>
+				<g>
+					<path d="M 50,100 A 1,1 0 0 1 50,0" />
+				</g>
+				<g>
+					<path d="M 50,75 A 1,1 0 0 0 50,-25" />
+				</g>
+				<defs>
+					<linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+						<stop offset="0%" style="stop-color: #647dee; stop-opacity: 1" />
+						<stop offset="100%" style="stop-color: #7f53ac; stop-opacity: 1" />
+					</linearGradient>
+				</defs>
+			</svg>
+		</section>
+
+		<header class="header" id="home">
 		
 			<section class="header__landing-page--1">
 				<div class="header__landing-page--1__navigation">
-					<a href="" class="header__landing-page--1__navigation__link">Home</a>
-					<a href="" class="header__landing-page--1__navigation__link">About me</a>
-					<a href="" class="header__landing-page--1__navigation__link">Projects</a>
-					<a href="" class="header__landing-page--1__navigation__link">Contacts</a>
+					<a href="#home" class="header__landing-page--1__navigation__link">Home</a>
+					<a href="#about-me" class="header__landing-page--1__navigation__link">About me</a>
+					<a href="#projects" class="header__landing-page--1__navigation__link">Projects</a>
+					<a href="#contacts" class="header__landing-page--1__navigation__link">Contacts</a>
 				</div>
 			</section>
 
@@ -67,7 +89,7 @@
 
 		</header>
 
-		<main class="main">
+		<main class="main" id="about-me">
 			<div class="about-me" id="map">
 				<div class="about-me__text">
 					<h2 class="about-me__text__cover">About me</h2>
@@ -82,8 +104,8 @@
 				</div>
 			</div>
 
-			<div class="projects">
-				<div class="projects__headline">
+			<div class="projects" >
+				<div class="projects__headline" id="projects">
 					<h1 class="projects__headline__1">Projects</h1>
 					<p class="projects__headline__2">
 						Here are some of my projects over the years:
@@ -96,7 +118,7 @@
 							A RESTful API built using Node.js and Express, that returns card
 							models considering provided filters.
 						</p>
-						<a href="#" class="projects__card__link">Let me see it!</a>
+						<a href="https://github.com/HUJDUR/cars-REST" target="null" class="projects__card__link">Let me see it!</a>
 					</div>
 					<div class="projects__card projects__card__2">
 						<h2 class="projects__card__name">Quote or a Joke?</h2>
@@ -104,19 +126,19 @@
 							Web app that gives you a random quote or a joke on demand. Built
 							using JavaScript and Sass.
 						</p>
-						<a href="#" class="projects__card__link">Let me see it!</a>
+						<a href="https://github.com/HUJDUR/quote-or-a-joke" target="null" class="projects__card__link">Let me see it!</a>
 					</div>
 					<div class="projects__card projects__card__3">
 						<h2 class="projects__card__name">Portfolio</h2>
 						<p class="projects__card__description">
 							The portfolio that you are currently visiting.
 						</p>
-						<a href="#" class="projects__card__link">Let me see it!</a>
+						<a href="https://github.com/HUJDUR/portfolio" target="null" class="projects__card__link">Let me see it!</a>
 					</div>
 				</div>
 			</div>
 		</main>
-		<footer class="contacts">
+		<footer class="contacts" id="contacts">
 			<p class="contacts__text">
 				<h1 class="contacts__text__headline">Feel free to reach out! </h1>
 				<p class="contacts__text__message">You can find me on: <a href="" class="contacts__text__link">LinkedIn</a>, <a href="" class="contacts__text__link">GitHub</a>,

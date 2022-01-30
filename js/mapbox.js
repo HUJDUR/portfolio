@@ -3,12 +3,12 @@ mapboxgl.accessToken =
 
 const locations = [
 	{
-		city: 'Teslic',
+		city: 'Teslić',
 		coordinates: [17.8595, 44.6063],
 		description: 'City in which I was born.',
 	},
 	{
-		city: 'Bosanski Samac',
+		city: 'Bosanski Šamac',
 		coordinates: [18.469, 45.0611],
 		description: 'Current job location.',
 	},
@@ -36,7 +36,7 @@ locations.forEach((location) => {
 	const el = document.createElement('div');
 	el.className = 'marker';
 
-	new mapboxgl.Marker({
+	const marker = new mapboxgl.Marker({
 		element: el,
 		anchor: 'bottom',
 	})
@@ -47,6 +47,9 @@ locations.forEach((location) => {
 			)
 		)
 		.addTo(map);
+
+	el.addEventListener('mouseenter', () => marker.togglePopup());
+	el.addEventListener('mouseleave', () => marker.togglePopup());
 });
 
 let popup = new mapboxgl.Popup({
